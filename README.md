@@ -29,7 +29,7 @@ This is all the code regarding the preprocessing, ERP, time-frequency and statis
    Calculates the SNR using the method described by Viola et al. (2011) (DOI: 10.1111/j.1469-8986.2011.01224.x) based on data from preprocessing after step 4.
 5. Run *stats_MMN.R*
 
-   Calculates descriptives for MMN mean and peak amplitude, peak latency, SNR from step 1 and 2, ANOVA with system x tone interaction for MMN measures and follow-up t-tests, t-test for SNR between dry and wet EEG, raincloud plots for SNR and MMN (mean amplitude)
+   Calculates descriptives for MMN mean and peak amplitude, peak latency, SNR from step 1 and 2, ANOVA with system x tone interaction for MMN measures and follow-up t-tests, t-test for SNR between dry and wet EEG, raincloud plots for SNR and MMN (mean amplitude) and Bland-Altman plots for MMN characteristics.
 7. Run *plot_ERPs.py*
 
    Plots MMN curves.
