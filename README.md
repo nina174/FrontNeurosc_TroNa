@@ -6,16 +6,16 @@ This is all the code regarding the preprocessing, ERP, time-frequency and statis
 1. Run *open_raw.py*
 
    Loads the data, sets references and montages, opens a window to mark bad channels or loads .txt-file that contains names of bad channels (if already exists).
-3. Run *epoching.py*
+2. Run *epoching.py*
 
    Loads *…raw.fif* from step 1, filters the data, creates epochs, resampling. 
-5. Run *ica.py*
+3. Run *ica.py*
 
    Loads *…epo.fif* from step 2, re-references the EOGs, ICA, components correlating with EOGs are rejected, interpolation of bad channels.
-7. Run *artifact_rejection.py*
+4. Run *artifact_rejection.py*
 
    Loads *…ica_epo.fif* from step 3, rejects trials containing artifacts according to criteria set in line 43/44 and 46, equalize event counts of relevant conditions.
-9. Run *summarize_preproc.py*
+5. Run *summarize_preproc.py*
 
    Returns descriptives and statistics of preprocessing for wet vs. dry EEG.
 
@@ -24,16 +24,16 @@ This is all the code regarding the preprocessing, ERP, time-frequency and statis
 1.	Run *extract_ERPs_singlechans.py*
 
   	Loads data from preprocessing after step 4, applies baseline correction, accumulates for all participants (averaged over time points and electrodes), extracts peak latency and amplitude for each participant
-3. Run *snr.py*
+2. Run *snr.py*
 
    Calculates the SNR using the method described by Viola et al. (2011) (DOI: 10.1111/j.1469-8986.2011.01224.x) based on data from preprocessing after step 4.
-5. Run *stats_MMN.R*
+3. Run *stats_MMN.R*
 
    Calculates descriptives for MMN mean and peak amplitude, peak latency, SNR from step 1 and 2, ANOVA with system x tone interaction for MMN measures and follow-up t-tests, t-test for SNR between dry and wet EEG, raincloud plots for SNR and MMN (mean amplitude) and Bland-Altman plots for MMN characteristics.
-7. Run *plot_ERPs.py*
+4. Run *plot_ERPs.py*
 
    Plots MMN curves.
-9. Run *plot_topos.py*
+5. Run *plot_topos.py*
 
    Plots MMN topography. 
 
@@ -41,13 +41,15 @@ This is all the code regarding the preprocessing, ERP, time-frequency and statis
 1. Run *TFA_ft.m*
 
    Loads data from preprocessing after step 4, time-frequency analyses for standard and deviant tones separately
-3. Run *GAs_ft.m*
+2. Run *GAs_ft.m*
 
    Loads time-frequency data from step 1, averages over trials for each participant and accumulates for all participants
-5. Run *stats_TFA_ft.m*
+3. Run *stats_TFA_ft.m*
 
    Baseline-corrects grand averages from step 2, extracts data for statistical analysis in R, plots power spectra
-7.	Run *stats_theta.R*
+4.	Run *stats_theta.R*
+
+  	ANOVA with system x tone interaction for extracted MMN theta power from step 4 and follow-up t-tests, raincloud and Bland-Altman plot for MMN theta power.
 
 ## Resting-state analysis
 1. preprocessed data after step 3 is analyzed in Brainwave.
