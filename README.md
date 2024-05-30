@@ -53,11 +53,13 @@ This is all the code regarding the preprocessing, ERP, time-frequency and statis
 
 ## Resting-state analysis
 1. preprocessed data after step 3 is analyzed in Brainwave.
-2. 
+2. Run *stats_rs.R*
+
+   Produces Bland-Altman plots and statistics for PLI and MST-Diam. Creates table comparing all derived connectivity measures between wet and dry EEG (provided in supplementary material) and effect sizes reported in the main paper.
 
 
 
-
+## Dependencies
 Python version 3.11.4, MNE version 1.4.2., Matlab R2019a, Fieldtrip version fieldtrip-20211016, R version 4.3.3 (2024-02-29), RStudio 2023.12.1. 
 
  
